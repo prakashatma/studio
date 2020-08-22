@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/bootstrapproject.css"> -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    *{
+    margin:0px;
+    padding:0px;
+}
+#popupmain{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.6);
+    z-index: 101;
+}
+#popup{
+    width:500px;
+    height:250px;
+    background:rgb(31, 30, 30);
+    opacity: 1;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    box-shadow: 2px 2px 5px 3px darkgrey;
+    text-align: center;
+}
+#popup h1{
+    color:white;
+    font-size:2rem;
+    margin-top:40px;
+}
+#emailid{
+    width:50%;
+    padding:5px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+.submitid{
+    width:90px;
+    height:25px;
+    font-size:0.9rem;
+    background-color:#0fc0fa;
+    border:none;
+    color:white;
+    /* padding:0.6rem 1rem; */
+}
+#show-error{
+    margin-bottom: 10px;
+}
+
+
+
+/* home */
+.bgimg{
+    background-image: url(../img/keagan-henman-pPxJTtxfV1A-unsplash.jpg);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    width: 100%;
+    height:580px;
+    opacity:0.8;
+}
+
+.hearderset{
+    padding-top:150px;
+    box-sizing: border-box;
+    color:rgb(251, 251, 253);
+}
+.hearderset h2{
+    font-size: 45px;
+    font-weight: bold;
+}
+.hearderset h1{
+    font-size: 70px;
+}
+
+/* quote */
+#quote{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    /* background-color: rgb(248, 239, 225); */
+}
+.quotes{
+    height:150px;
+    width:750px;
+    margin-top: 60px;
+}
+.quotes h3{
+    font-size:1.3rem;
+
+}
+.quotes h5{
+    position: relative;
+    top:30px;
+    right:295px;
+}
+
+
+/* service */
+.ourservices{
+    padding:80px 0px 60px;
+    height:620px;
+}
+.ourservices h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.rowsetting{
+    margin:80px 0px !important;
+}
+.rowsetting h2{
+    margin-top:20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+.rowsetting p{
+    padding:12px;
+}
+
+.imgsetting{
+    border-radius: 50%;
+    height:100px;
+    width:100px;
+
+}
+.fa-shopping-cart{
+    margin-top:25px;
+}
+.fa-desktop{
+    margin-top:28px;
+}
+.fa-lock{
+    margin-top:25px;
+}
+
+
+.portfolio{
+    height:1100px;
+    width:100%;
+    padding:80px 0px 50px;
+}
+.portfolio h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.card{
+    margin-top: 40px;
+}
+
+
+.team{
+    height:600px;
+    padding:50px 0px 60px;
+    width:100%;
+}
+.team h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.teamsetting{
+    margin-top: 60px;
+}
+
+
+
+/* About-us section */
+#about-us::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* top: 0px;
+    left: 0px; */
+    z-index: -1;
+    opacity: 0.8;
+    background: url("../img/contact1.jpg")no-repeat center center/cover;
+ }
+ #about-us{
+     position: relative;
+     color:white;
+ }
+ #about-us h1{
+     font-size: 2.4rem;
+     text-align: center;
+     padding-top: 10px;
+ }
+ #information{
+     display: flex;
+     justify-content:space-evenly;
+     align-items: center;
+     text-align: center;
+     padding-top: 50px;
+ }
+ .information1{
+     width:350px;
+     font-size: 1.3rem;
+ }
+ .contact{
+     position: relative;
+     bottom: 13px;
+     font-size: 1.3rem;
+ }
+.branch{
+    display: flex;
+    justify-content:center;
+    margin-top: 40px;
+    padding-bottom: 30px;
+    font-size: 1.2rem;
+}
+.branch2{
+    margin-top: 6px;
+    margin-left: 8px;
+}
+
+.footer{
+    margin:0px;
+    padding:0px;
+    height:30px;
+}
+.footer p{
+    line-height: 30px;
+
+}
+
+
+
+
+
+
+
+@media(min-width:992px ){
+
+}
+@media(min-width:768px) and (max-width:991px){
+  .hearderset h2{
+        font-size: 35px;
+        font-weight: bold;
+    }
+    .hearderset h1{
+        font-size: 50px;
+    }
+    /* abou-us section */
+.information1{
+    font-size: 0.95rem;
+}
+.contact{
+    font-size: 0.95rem;
+    bottom:12px;
+}
+.branch{
+    font-size: 0.95rem;
+}
+.branch2{
+    margin-top:11px;
+}
+#show-error{
+    margin-bottom: 10px;
+}
+    
+
+}
+@media(min-width:575px) and (max-width:767px){
+    #popup{
+        width:400px;
+        height:200px;
+    }
+    #popup h1{
+        font-size:1.5rem;
+        margin-top:30px;
+    }
+    #emailid{
+        width:50%;
+        padding:4px;
+        margin-top:15px;
+        margin-bottom: 10px;
+        font-size:0.8rem;
+
+    }
+    .submitid{
+        width:70px;
+        height:20px;
+        font-size:0.7rem;
+    }
+    #show-error{
+        margin-bottom: 0px;
+        font-size:0.9rem;
+
+    }
+
+    .quotes{
+        height:150px;
+        width:600px;
+    }
+    .quotes h3{
+        font-size:1rem;
+    
+    }
+    .quotes h5{
+        right:220px;
+        font-size:1rem;
+    }
+    
+
+
+
+    .hearderset h2{
+        font-size: 29px;
+        font-weight: bold;
+    }
+    .hearderset h1{
+        font-size: 42px;
+    }
+    .ourservices{
+        /* padding:80px 0px 60px; */
+        height:1220px;
+    }
+    .portfolio{
+        height:3350px;
+       
+    }
+    .team{
+        height:1300px;
+    }
+
+    /* about-us section  */
+
+.information1{
+    font-size: 0.7rem;
+    width:200px;
+}
+.contact{
+    font-size: 0.7rem;
+    bottom:8px;
+}
+.branch{
+    font-size: 0.9rem;
+}
+.branch2{
+    margin-top: 6px;
+}
+.information1 h2{
+    font-size: 1.5rem;
+}
+.contact h2{
+    font-size: 1.5rem;
+}
+.branch1 h2{
+    font-size: 1.5rem;
+}
+}
+@media(min-width:470px) and (max-width:574px){
+
+    #popup{
+        width:300px;
+        height:150px;
+    }
+    #popup h1{
+        font-size:1.2rem;
+        margin-top:20px;
+    }
+    #emailid{
+        width:50%;
+        padding:2px;
+        margin-top:10px;
+        margin-bottom: 0px;
+        font-size:0.6rem;
+    }
+    .submitid{
+        width:50px;
+        height:20px;
+        font-size:0.5rem;
+    }
+    #show-error{
+        margin-bottom: 0px;
+        font-size:0.7rem;
+
+    }
+
+    .quotes{
+        height:150px;
+        width:430px;
+    }
+    .quotes h3{
+        font-size:0.9rem;
+    
+    }
+    .quotes h5{
+        font-size:0.9rem;
+        right:160px;
+    }
+
+
+    .hearderset h2{
+        font-size: 29px;
+        font-weight: bold;
+    }
+    .hearderset h1{
+        font-size: 42px;
+    }
+    .ourservices{
+        /* padding:80px 0px 60px; */
+        height:1120px;
+    }
+    .portfolio{
+        height:3300px;
+       
+    }
+    .team{
+        height:1300px;
+    }
+     /* about-us section  */
+
+.information1{
+    font-size: 0.6rem;
+    width:200px;
+}
+.contact{
+    font-size: 0.6rem;
+    bottom:8px;
+}
+.branch{
+    font-size: 0.5rem;
+}
+.branch2{
+    margin-top: 7px;
+}
+.information1 h2{
+    font-size: 1.2rem;
+}
+.contact h2{
+    font-size: 1.2rem;
+}
+.branch1 h2{
+    font-size: 1.2rem;
+}
+}
+@media(max-width:469px){
+    #popup{
+        width:220px;
+        height:120px;
+    }
+    #popup h1{
+        font-size:1rem;
+        margin-top:7px;
+    }
+    #emailid{
+        width:50%;
+        padding:2px;
+        margin-top:10px;
+        margin-bottom: 0px;
+        font-size:0.5rem;
+    }
+    .submitid{
+        width:30px;
+        height:15px;
+        font-size:0.2rem;
+    }
+    #show-error{
+        margin-bottom: 0px;
+        font-size:0.5rem;
+    }
+
+    .quotes{
+        height:150px;
+        width:300px;
+    }
+    .quotes h3{
+        font-size:0.6rem;
+    
+    }
+    .quotes h5{
+        font-size:0.6rem;
+        right:110px;
+    }
+
+
+
+    .hearderset h2{
+        font-size: 19px;
+        font-weight: bold;
+    }
+    .hearderset h1{
+        font-size: 25px;
+    }
+    .ourservices{
+        /* padding:80px 0px 60px; */
+        height:1280px;
+    }
+    .portfolio{
+        height:2650px;
+       
+    }
+    .team{
+        height:1300px;
+    }
+     /* about-us section  */
+
+.information1{
+    font-size: 0.5rem;
+    width:200px;
+}
+.contact{
+    font-size: 0.5rem;
+    bottom:8px;
+}
+.branch{
+    font-size: 0.4rem;
+}
+.branch2{
+    margin-top: 4px;
+}
+.information1 h2{
+    font-size: 0.8rem;
+}
+.contact h2{
+    font-size: 0.8rem;
+}
+.branch1 h2{
+    font-size: 0.8rem;
+}
+.footer{
+    font-size: 0.6rem;
+}
+}
+</style>
+
+<body>
+    <div id="popupmain" style="display: none;">
+        <div id="popup">
+            <h1 id="newsheading">Subscribe to our StudioHunt</h1>
+            <input type="email" name="" id="emailid" placeholder="user@email.com">
+            <br>
+            <div id="show-error"> </div>
+            <button class="submitid" id="submitbtn">Subscribe</button>
+            <button class="submitid" id="nothanks">No Thanks</button>
+        </div>
+    </div>
+    <div class="bgimg">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+            <div class="container-fluid ">
+                <a href="" class="navbar-brand text-danger font-weight-bold">StudioHunt</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsenavbar">
+                    <span class="navbar-toggler-icon"> </span>
+                </button>
+                <div class="collapse navbar-collapse text-center" id="collapsenavbar">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item"> <a href="#home" class="nav-link text-white">HOME</a> </li>
+                        <li class="nav-item"> <a href="#service" class="nav-link  text-white">SERVICES</a> </li>
+                        <li class="nav-item"> <a href="#portfolio" class="nav-link  text-white">WORK</a> </li>
+                        <li class="nav-item"> <a href="#team" class="nav-link  text-white">TEAM</a> </li>
+                        <li class="nav-item"> <a href="#about-us" class="nav-link  text-white">ABOUT</a> </li>
+                    </ul>
+                    <form class="form-inline d-block ml-10" action="/action_page.php">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <div class="container text-center hearderset" id="home">
+            <h2>Welcome To Our Studio</h2>
+            <h1>IT'S NICE TO MEET YOU</h1>
+            <button class="btn btn-success text-white btn-lg" id="btnid"> SUBSCRIBE</button>
+        </div>
+    </div>
+    <section id="quote">
+        <div class="quotes">
+            <h3>"Each multiplex has screens allocated to each studio. The screens need filling. Studios have to create product to fill their screen, and the amount of good product is limited. "</h3>
+            <h5>-Orson Welles</h5>
+        </div>
+    </section>
+    <section class="container ourservices text-center" id="service">
+        <h1>SERVICES</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur.</p>
+        <div class="row rowsetting">
+            <div class="col-lg-4 col-md-4 col-sm-10 d-block m-auto">
+                <div class="imgsetting d-block m-auto bg-warning">
+                    <i class="fa fa-shopping-cart fa-3x text-white"></i>
+                </div>
+                <h2>E-Commerce</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores unde enim labore tenetur veniam
+                    deleniti? Atque nulla voluptatibus maxime aspernatur!</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-10 d-block m-auto ">
+                <div class="imgsetting d-block m-auto bg-warning">
+                    <i class="fa fa-desktop fa-3x text-white"></i>
+                </div>
+                <h2>Animated Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores unde enim labore tenetur veniam
+                    deleniti? Atque nulla voluptatibus maxime aspernatur!</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-10 d-block m-auto ">
+                <div class="imgsetting d-block m-auto bg-warning">
+                    <i class="fa fa-lock fa-3x text-white"></i>
+                </div>
+                <h2>Security</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores unde enim labore tenetur veniam
+                    deleniti? Atque nulla voluptatibus maxime aspernatur!</p>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio bg-light" id="portfolio">
+        <div class="container text-center">
+            <h1>WHAT WE DO</h1>
+            <P>Lorem, ipsum dolor sit amet consectetur.</P>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="img/markus-spiske-BwRBiaKZKbA-unsplash.jpg" alt="" class="card-img img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">Photography</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, eos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="img/joseph-pearson-XveTTNSrhnQ-unsplash.jpg" alt="" class="card-img img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">Photo Editing</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, eos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="img/marcela-laskoski-YrtFlrLo2DQ-unsplash.jpg" alt="" class="card-img img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">Music</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, eos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="img/jakob-owens-iF4awMfbBPY-unsplash.jpg" alt="" class="card-img img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">Video Editing</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, eos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="img/jakob-owens-CiUR8zISX60-unsplash.jpg" alt="" class="card-img img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">Movie Shooting</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, eos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="card">
+                        <img src="img/austin-neill-gmuAWJGNHcY-unsplash.jpg" alt="" class="card-img img-fluid">
+                        <div class="card-body">
+                            <h2 class="card-title">Songs Recording</h2>
+                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, eos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="container text-center ">
+            <h1>Our Team</h1>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+            <div class="row teamsetting">
+                <div class="col-lg-4 col-md-4 col-sm-10 col-12 d-block m-auto">
+                    <figure class="figure">
+                        <img src="img/kal-visuals-J4U157mW5zU-unsplash.jpg" alt="" class="figure-img img-fluid rounded-circle" height="250px" width="250px">
+                        <figcaption>
+                            <h4> Kay Garland </h4>
+                            <p class="figure-caption">Photo Editor</p>
+                        </figcaption>
+                    </figure>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-10 col-12 d-block m-auto">
+                    <figure class="figure">
+                        <img src="img/kelly-sikkema-UUNoXZ8H56Q-unsplash.jpg" alt="" class="figure-img img-fluid rounded-circle" height="250px" width="250px">
+                        <figcaption>
+                            <h4> Lorem Ipsum </h4>
+                            <p class="figure-caption">Video Editor</p>
+                        </figcaption>
+                    </figure>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-10 col-12 d-block m-auto">
+                    <figure class="figure">
+                        <img src="img/kristin-wilson-oDzjuCzb3xw-unsplash.jpg" alt="" class="figure-img img-fluid rounded-circle" height="250px" width="250px">
+                        <figcaption>
+                            <h4> Kenny Uhoachi </h4>
+                            <p class="figure-caption">Graphic Designer</p>
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about-us">
+        <h1>About-Us</h1>
+        <div id="information">
+        <div class="information1">
+            <h2>Address</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, consequatur.</p>
+        </div>
+        <div class="contact">
+            <h2>Contact Number</h2>
+            <p>9876543234</p>
+        </div>
+    </div>
+    <div class="branch">
+        <div class="branch1">
+        <h2>Our Branches:</h1>
+    </div>
+    <div class="branch2">
+        <p>Delhi , Mumbai , Kolkata , Hyderabad , Jaipur , Haryana , Punjab. </p>
+    </div>
+</div>
+    </section>
+        <footer class="footer">
+            <p class="text-center bg-dark text-white">Copyright &copy; www.MyOnlineStore.com. &nbsp;All rights reserved!
+            </p>
+        </footer>
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#btnid').click(function(){
+            $('#popupmain').css('display','block');
+        });
+    });
+    $('#nothanks').click(function(){
+
+        $('#popupmain').css('display','none');
+    });
+
+    $('.submitid').click(function(){
+        var user=$('#emailid').val();
+        if(user==""){
+            $('#show-error').html('**The email should be filled').css('color','red');
+            return false;
+        }
+        else if(user.length<=7){
+            $('#show-error').html('**Invalid Email').css('color','red');
+            return false;
+        }
+        else{
+            
+        $('#popupmain').css('display','none');
+        }
+    });
+</script>
+
+</html>
